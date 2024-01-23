@@ -30,4 +30,4 @@ Then run development server.
 
 Make sure to have either a Phantom or Solflare Solana wallet with SOL tokens. Set your network on wallets to Devnet.
 
-Get your to SOL at [https://faucet.solana.com] (https://faucet.solana.com/)
+Get your to SOL at [https://faucet.solana.com](https://faucet.solana.com/)
