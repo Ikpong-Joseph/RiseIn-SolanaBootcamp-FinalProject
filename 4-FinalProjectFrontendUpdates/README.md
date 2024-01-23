@@ -1,33 +1,115 @@
-# Review Frontend
+# Web3 Auction DApp - README
 
-Contains a single page application for interacting with the review program
+Welcome to the **Web3 Review** project repository! This decentralized solana-based project from RiseIn's Solana Bootcamp leverages blockchain technology to implement a review platform on the Solana network. Participants can add, update and view reviews.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Smart Contracts](#smart-contracts)
+- [Frontend](#frontend)
+- [Contributing](#contributing)
+- [Errors](#Errors)
+
+## Overview
+
+The **Web3 Review** provides a user-friendly interface to participate in Solana-based reviews. This project ensures transparency and trust in the local business or product review process through the use of smart contracts. Think of it as the Decentralised Yelp. Users can add and update reviews, as well as see other reviews.
+
+## Features
+
+- Add reviews.
+- Update reviews.
+- Browse reviews by other reviewers.
+- Solana Wallet Integration: Connect your Solana wallet to participate directly (For now, you have to be on the Solana Devnet).
 
 ## Getting Started
 
-First, change directory in your terminal to the ~/4-FinalProjectFrontendUpdates directory.
+Follow these steps to set up the project locally and start participating in the decntralised solana-based reviews.
 
-Second, install required libraries:
+### Prerequisites
+
+1. Crypto Wallet: Ensure you have a [Phantom](https://phantom.app/) or [Solflare](https://solflare.com/) wallets installed on your browser.
+
+2. Navigate to testnet (Devnet) network in your choosen wallet.
+
+3. Get your to SOL tokens at [https://faucet.solana.com](https://faucet.solana.com/)
+
+### Installation
+
+1. Clone the repository:
 
 ```bash
-npm install
+  git clone https://github.com/Ikpong-Joseph/RiseIn-SolanaBootcamp-FinalProject.git
 ```
 
-Then, run the development server:
+2. Navigate to the project directory in your terminal.
+```bash
+~/4-FinalProjectFrontendUpdates
+```
+
+
+4. Install required npm packages:
 
 ```bash
-npm run build
-npm run start
+ npm install
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 If you encounter any npm errors during install, run
 
 ```bash
 npm update
 ```
-Then run development server.
 
-Make sure to have either a Phantom or Solflare Solana wallet with SOL tokens. Set your network on wallets to Devnet.
+## Usage
 
-Get your to SOL at [https://faucet.solana.com](https://faucet.solana.com/)
+1. Start the development server:
+
+```bash
+npm run build
+npm run start
+```
+
+2. Open your web browser and navigate to `http://localhost:3000` to access the page.
+
+3. Connect your Solana wallet via button on top right corner.
+
+4. Browse ongoing auctions, place bids, and monitor your auction activity.
+
+## Smart Contracts
+
+The Rust smart contracts in this project facilitate the review process. They handle adding and updating reviews. These contracts are deployed on the Solana Devnet.
+
+- `lib.rs`: Handles the broad logic of creating transactions, adding and updating reviews.
+- `instruction.rs`: Defines the program's instruction data for executing the program.
+- `state.rs`: Oversees the basic state of the program and handles some common errors.
+
+## Frontend
+
+The review page frontend is built using modern web technologies including React.js. 
+
+- **React.js**: Powers the DApp's user interface.
+- **solana/web3.js , solana/wallet-adapter-react**: The Solana JavaScript API for smart contract interaction.
+- **Phantom / Solflare**: Solana wallets for secure transactions.
+
+## Contributing
+
+Contributions to this project are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature/bug fix.
+3. Make changes and test thoroughly.
+4. Commit with clear and concise messages.
+5. Push changes to your fork.
+6. Submit a pull request describing your changes.
+
+## Errors
+
+The project is currently giving an error of inability to send transaction. So you won't be able to submit reviews.
+
+---
+
+Thank you for your interest in the Web3 Review project! For questions or suggestions, reach out to us or open an issue on [GitHub](https://github.com/Ikpong-Joseph/RiseIn-SolanaBootcamp-FinalProject). Happy reviewing! 🚀
