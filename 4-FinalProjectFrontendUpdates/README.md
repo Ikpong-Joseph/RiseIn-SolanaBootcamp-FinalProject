@@ -4,7 +4,9 @@ Contains a single page application for interacting with the review program
 
 ## Getting Started
 
-First, install required libraries:
+First, change directory in your terminal to the ~/4-FinalProjectFrontendUpdates directory.
+
+Second, install required libraries:
 
 ```bash
 npm install
@@ -13,9 +15,15 @@ npm install
 Then, run the development server:
 
 ```bash
-npm run dev
+npm run build
+npm run start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+If you encounter any npm errors during install, run
+
+```bash
+npm update
+```
+Then run development server.
