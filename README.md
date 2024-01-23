@@ -2,7 +2,7 @@
 
 This repository contains the tasks from the RiseIn Solana Bootcamp, January 2024.
 
-# Web3 Auction DApp - README
+# Solana Review Project - README
 
 Welcome to the **Web3 Review** project repository! This decentralized solana-based project from RiseIn's Solana Bootcamp leverages blockchain technology to implement a review platform on the Solana network. Participants can add, update and view reviews.
 
