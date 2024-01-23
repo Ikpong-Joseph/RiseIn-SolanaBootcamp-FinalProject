@@ -7,7 +7,8 @@ import { fetchReviews } from "@/util/fetchReviews";
 import { useWallet } from "@solana/wallet-adapter-react";
 import ReviewForm from "@/components/Form";
 
-const REVIEW_PROGRAM_ID = "2xuLAJcbZTqZJ3DNf3DcHgRg7a1dBmtfLnjyvgkNq286";
+//Replace with your own Program_id
+const REVIEW_PROGRAM_ID = "6pPhYpuNCTGbLWmWaxchA8RD8KtPZYvm1qBLw4R8tQja";
 
 export default function Home() {
     const connection = new web3.Connection(web3.clusterApiUrl("devnet"));
@@ -19,16 +20,15 @@ export default function Home() {
     const [title, setTitle] = useState("");
     const [rating, setRating] = useState(0);
     const [description, setDescription] = useState("");
+    const [location, setLocation] = useState("");
 
     useEffect(() => {
-        const fetchAccounts = async () => {
-            await fetchReviews(REVIEW_PROGRAM_ID, connection).then(setReviews);
-        };
+        const fetchAccounts = async () => { };
         fetchAccounts();
     }, []);
 
     const handleSubmit = () => {
-        const review = new Review(title, rating, description);
+        const review = new Review(title, rating, description, location);
         handleTransactionSubmit(review);
     };
 
@@ -94,9 +94,11 @@ export default function Home() {
                     title={title}
                     description={description}
                     rating={rating}
+                    location={location}
                     setTitle={setTitle}
                     setDescription={setDescription}
                     setRating={setRating}
+                    setLocation={setLocation}
                     handleSubmit={handleSubmit}
                 />
             </div>
