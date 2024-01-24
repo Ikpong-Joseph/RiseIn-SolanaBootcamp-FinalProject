@@ -1,8 +1,8 @@
-pub mod instructions;
+pub mod instruction;
 pub mod state;
 
 use borsh::BorshSerialize;
-use crate::instructions::ReviewInstruction;
+use crate::instruction::ReviewInstruction;
 use crate::state::AccountState;
 use crate::state::ReviewError;
 use solana_program::{
@@ -33,13 +33,13 @@ pub fn process_instruction(
             title,
             rating,
             description,
-            location: String,
+            location,
         } => add_review(program_id, accounts, title, rating, description, location),
         ReviewInstruction::UpdateReview {
             title,
             rating,
             description,
-            location: String,
+            location,
         } => update_review(program_id, accounts, title, rating, description , location),
     }
 }
@@ -56,7 +56,7 @@ pub fn add_review(
     msg!("Title: {}", title);
     msg!("Rating: {}", rating);
     msg!("Description: {}", description);
-    msg!("Location: {}", location);
+    
 
     let account_info_iter = &mut accounts.iter();
 
@@ -139,7 +139,7 @@ pub fn update_review(
     _title: String,
     rating: u8,
     description: String,
-    location: String,
+    _location: String,
 ) -> ProgramResult {
     msg!("Updating  review...");
 
@@ -188,7 +188,7 @@ pub fn update_review(
     msg!("Title: {}", account_data.title);
     msg!("Rating: {}", account_data.rating);
     msg!("Description: {}", account_data.description);
-    msg!("Location: {}", account_data.location);
+    
 
     account_data.rating = rating;
     account_data.description = description;
@@ -197,7 +197,7 @@ pub fn update_review(
     msg!("Title: {}", account_data.title);
     msg!("Rating: {}", account_data.rating);
     msg!("Description: {}", account_data.description);
-    msg!("Location: {}", account_data.location);
+    
 
     msg!("serializing account");
     account_data.serialize(&mut &mut pda_account.data.borrow_mut()[..])?;

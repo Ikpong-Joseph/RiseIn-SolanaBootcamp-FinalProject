@@ -23,7 +23,9 @@ export default function Home() {
     const [location, setLocation] = useState("");
 
     useEffect(() => {
-        const fetchAccounts = async () => { };
+        const fetchAccounts = async () => {
+            await fetchReviews(REVIEW_PROGRAM_ID, connection).then(setReviews);
+        };
         fetchAccounts();
     }, []);
 
