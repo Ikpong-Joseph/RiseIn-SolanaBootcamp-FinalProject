@@ -68,8 +68,7 @@ npm update
 1. Start the development server:
 
 ```bash
-npm run build
-npm run start
+npm start
 ```
 
 2. Open your web browser and navigate to `http://localhost:3000` to access the page.
