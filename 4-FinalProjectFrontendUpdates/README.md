@@ -13,7 +13,6 @@ Welcome to the **Web3 Review** project repository! This decentralized solana-bas
 - [Smart Contracts](#smart-contracts)
 - [Frontend](#frontend)
 - [Contributing](#contributing)
-- [Errors](#Errors)
 
 ## Overview
 
@@ -105,10 +104,6 @@ Contributions to this project are welcome! To contribute:
 4. Commit with clear and concise messages.
 5. Push changes to your fork.
 6. Submit a pull request describing your changes.
-
-## Errors
-
-The project is currently giving an error of inability to send transaction. So you won't be able to submit reviews.
 
 ---
 
